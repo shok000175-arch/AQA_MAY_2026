@@ -18,7 +18,44 @@ public class HomeWork {
                 "asd.asd@.asdasd",
                 "asd@@.asdasd",
                 "asd@@asd.asd",
-                "some_email_that_is_very_long@long_domain_name.com" //+
+                "some_email_that_is_very_long@long_domain_name.com"//+
         };
+        for ( String email : emails) {
+            if (email.indexOf('@') != email.lastIndexOf('@')) {
+                continue;
+            }
+            if (!email.contains("@")) {
+                continue;
+            }
+            String[] parts = email.split("@");
+
+            if (parts.length != 2) {
+                continue;
+            }
+
+            String name = parts[0];
+            String domain = parts[1];
+
+            if (name.length() < 3) {
+                continue;
+            }
+
+            if (domain.length() < 7) {
+                continue;
+            }
+
+            if (domain.startsWith(".") || domain.endsWith(".")) {
+                continue;
+            }
+
+            int firstDot = domain.indexOf('.');
+            int lastDot = domain.lastIndexOf('.');
+
+            if (firstDot == -1 || firstDot != lastDot) {
+                continue;
+            }
+
+            System.out.println(email);
+        }
     }
 }
