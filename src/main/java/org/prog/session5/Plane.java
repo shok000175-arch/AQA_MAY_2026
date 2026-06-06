@@ -11,11 +11,16 @@ public class Plane {
         this.maxSeats = 200;
     }
 
-    public int getFreeSeatsPercent() { int freeSeats = maxSeats - passengers;
+    public int getFreeSeatsPercent() {
+        int freeSeats = maxSeats - passengers;
         return (freeSeats * 100) / maxSeats;
     }
 
+    public int getFreeSetsPercent() {
+        return (passengers * 100) / maxSeats;
+    }
+
     public String info() {
-        return "Plane " + id + " has " +  passengers + " passengers, free seats % = " + getFreeSeatsPercent();
+        return "Plane " + id + " has " +  passengers + " passengers, free seats = " + getFreeSeatsPercent() + "%";
     }
 }
