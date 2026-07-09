@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Monsieur",
+        "first": "Besim",
+        "last": "Picard"
+      },
+      "nat": "CH"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Edda",
+        "last": "Dybvik"
+      },
+      "nat": "NO"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Capucine",
+        "last": "Gonzalez"
+      },
+      "nat": "FR"
+    }
+  ]
+}
