@@ -4,12 +4,10 @@
 #go to google.com
 #enter that person's first and last name to search
 
-  Feature: All in one test
+Feature: Allo phones
 
-    Scenario: retrieve and search for random people
-      Given I request 3 random people from random user service
-      Given I store those people in DB
-      When I pick one random person from DB
-      When I load google page
-      When I accept cookies if present
-      Then I set search input to random persons name
+  Scenario: Search phones and check first 3 goods
+
+    Given I open Allo website
+    When I search for iPhone
+    Then I check first 3 goods
